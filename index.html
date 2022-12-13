@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 400px)" href="style.css" />
+    <script src="https://kit.fontawesome.com/e4962283a7.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+   <header>
+        <div class="placar">
+            <section class="name">
+                <h2>Pedra</h2>
+                <h2>Papel</h2>
+                <h2>Tesoura</h2>
+            </section>
+            <section class="pontos">
+                <h3>score</h3>
+                <h2 id="score">0</h2>
+            </section>
+        </div>
+   </header>
+
+   <main>
+    <div id="modal">
+        <header>
+            <h2>Regras</h2>
+            <button id="closeModal">Fechar</button>
+        </header>
+
+        <article>
+            <ul>
+                <li>Empate equivale a 5 pontos</li>
+                <li>Ganhador recebera 10 pontos</li>
+                <li>Já o perdedor irá diminuir 5 pontos</li>
+            </ul>
+        </article>
+
+    </div>
+        <section id="escolher">
+            <section class="colun">
+                <div id="pedra" class="elementos" onclick="pedra()">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                </div>
+                <div id="papel" class="elementos" onclick="papel()">
+                    <i class="fa-solid fa-hand"></i>
+                </div>
+            </section>
+            <section class="colun" >
+                <div id="tesoura" class="elementos" onclick="tesoura()">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                </div>
+            </section>
+            
+        </section>
+
+        <section id="vencedor">
+            <section>
+                <div class="user">
+                    <div id="userPedra">
+                        <i class="fa-solid fa-hand-back-fist"></i>
+                    </div>
+                    <div id="userPapel">
+                        <i class="fa-solid fa-hand"></i>
+                    </div>
+                    <div id="userTesoura">
+                        <i class="fa-solid fa-hand-scissors"></i>
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <h2 id="resultado"></h2>
+                    <button id="btn-Tentar" onclick="tentarNovamente()">Jogar novamente</button>
+                </div>
+
+                <div class="pc">
+                    <div id="pcPedra">
+                        <i class="fa-solid fa-hand-back-fist"></i>
+                    </div>
+                    <div id="pcPapel">
+                        <i class="fa-solid fa-hand"></i>
+                    </div>
+                    <div id="pcTesoura">
+                        <i class="fa-solid fa-hand-scissors"></i>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <footer>
+            <button onclick="opemModal()">Regras</button>
+        </footer>
+   </main>
+
+</body>
+</html>
